@@ -22,7 +22,14 @@ public class HangmanGame
         this.gameStatus = "";
         for(int n = 0; n < word.length(); n++)
         {
-            gameStatus += "-";
+            if(Character.isLetter(secretWord.charAt(n)))
+            {
+                gameStatus += "-";
+            }
+            else
+            {
+                gameStatus += secretWord.charAt(n);
+            }
         }
         this.guessedLetters = "";
     }
